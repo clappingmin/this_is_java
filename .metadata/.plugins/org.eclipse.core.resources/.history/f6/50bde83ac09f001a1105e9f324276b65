@@ -1,13 +1,9 @@
 package chap03;
 
-import java.util.Scanner;
-
 public class AppleBox {
 
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
-		
 		int apple = 200;
 		int perBox = 12;
 
