@@ -14,9 +14,9 @@ public class BitReverseOperatorExample {
 	
 	public static String toBinaryString(int value) {
 		
-		String str = Integer.toBinaryString(value);
-				
-		return str;
+		String s = null;
+		
+		return s;
 	}
 
 }
