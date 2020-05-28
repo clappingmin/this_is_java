@@ -3,8 +3,7 @@ package chap04;
 import java.util.Scanner;
 
 public class RandomGame {
-
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		int inputnum = 0;
 		int cnt = 1;
@@ -33,6 +32,9 @@ public class RandomGame {
 					score -= 10;
 					cnt++;
 				}
+				
+				
+				
 				if (score == 0) {
 					System.out.println("Gameover!");
 					break;
