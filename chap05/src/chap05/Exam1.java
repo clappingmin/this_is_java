@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exam1 {
 	public static void main(String[] args) {
-		int[][] student = new int[10][3]; // 10명의 학생 ,국, 영, 수
+		int[][] student = new int[10][3]; // 10명의 학생 - 국, 영, 수
 		Scanner scanner = new Scanner(System.in);
 		int run = 0;
 		double[] avg = new double[10];
