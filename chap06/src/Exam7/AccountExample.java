@@ -24,10 +24,10 @@ public class AccountExample {
 				createAccount();
 			}
 
-			else if (run == 2) {// ÇÐ»ý °³ÀÎ Á¶È¸
+			else if (run == 2) {
 				accountList();
 
-			} else if (run == 3) { // ÀüÃ¼ ÇÐ»ý Á¶È¸
+			} else if (run == 3) {
 				deposit();
 
 			} else if (run == 4) {
@@ -60,7 +60,7 @@ public class AccountExample {
 
 		for (int i = 0; i < cnt; i++) {
 			System.out.println("-------------------------------------");
-			System.out.println("°èÁÂÁÖ: " + accountArry[i].getOwner() + " °èÁÂ¹øÈ£: " + accountArry[i].getAno() + " °èÁÂ ÀÜ¾×:"
+			System.out.println("°èÁÂÁÖ: " + accountArry[i].getOwner() + " °èÁÂ¹øÈ£: " + accountArry[i].getAno() + " °èÁÂ ÀÜ¾×: "
 					+ accountArry[i].getBalance());
 		}
 	}
@@ -70,19 +70,23 @@ public class AccountExample {
 		String ano = scanner.next();
 		System.out.println("¿¹±Ý¾× : ");
 		int money = scanner.nextInt();
+		boolean check = false;
 
 		for (int i = 0; i < cnt; i++) {
 			if (ano.equals(accountArry[i].getAno())) {
+				check = true;
 				int balance = accountArry[i].getBalance();
 				balance += money;
 				accountArry[i].setBalance(balance);
 
 				System.out.println("-------------------------------------");
-				System.out.println("°èÁÂÁÖ: " + accountArry[i].getOwner() + " °èÁÂ¹øÈ£: " + accountArry[i].getAno() + " °èÁÂ ÀÜ¾×:"
+				System.out.println("°èÁÂÁÖ: " + accountArry[i].getOwner() + " °èÁÂ¹øÈ£: " + accountArry[i].getAno() + " °èÁÂ ÀÜ¾×: "
 						+ accountArry[i].getBalance());
 			}
 
 		}
+		if(check == false)
+			System.out.println("°èÁÂ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä.");
 	}
 
 	private static void withdraw() {
@@ -90,6 +94,7 @@ public class AccountExample {
 		String ano = scanner.next();
 		System.out.println("Ãâ±Ý¾× : ");
 		int money = scanner.nextInt();
+		boolean check = false;
 
 		for (int i = 0; i < cnt; i++) {
 			if (ano.equals(accountArry[i].getAno())) {
@@ -103,11 +108,13 @@ public class AccountExample {
 
 					System.out.println("-------------------------------------");
 					System.out.println("°èÁÂÁÖ: " + accountArry[i].getOwner() + " °èÁÂ¹øÈ£: " + accountArry[i].getAno()
-							+ " °èÁÂ ÀÜ¾×:" + accountArry[i].getBalance());
+							+ " °èÁÂ ÀÜ¾×: " + accountArry[i].getBalance());
 				}
 			}
 
 		}
+		if(check == false)
+			System.out.println("°èÁÂ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä.");
 	}
 
 }
